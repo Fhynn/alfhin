@@ -1,0 +1,216 @@
+/* style-fixed.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* Mengganti URL gambar latar belakang dengan gambar Meliodas */
+  background: url('https://i.supa.codes/dD6djl') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  color: #ff4081;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff4081;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 100px 20px 60px;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.intro h1 span {
+  color: #ff4081;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta {
+  background: #ff4081;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  background: #e73370;
+}
+
+.profile-img {
+  margin-top: 30px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 0 20px #ff4081;
+  object-fit: cover;
+}
+
+/* Sections */
+section {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #ff4081;
+  margin-bottom: 20px;
+}
+
+/* Skills */
+.skills-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 25px;
+  border-radius: 15px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+/* Projects */
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Contact */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input, form textarea {
+  width: 80%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1rem;
+}
+
+form textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+button {
+  background: #ff4081;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e73370;
+}
+
+/* Sosmed */
+.sosmed {
+  margin-top: 30px;
+}
+
+.sosmed a {
+  margin: 0 10px;
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sosmed a:hover {
+  color: #ff4081;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 0.9rem;
+}

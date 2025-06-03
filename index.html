@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Keren</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4eae3a7e37.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      background: url('https://i.pinimg.com/originals/eb/d2/ed/ebd2edacee2a8f9fd14fa96ef4b97b29.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+
+    /* Dark overlay agar teks terbaca */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 15, 15, 0.7);
+      z-index: -1;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5em;
+      color: #ff4081;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff4081;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .intro h1 {
+      font-size: 2.5rem;
+    }
+
+    .intro h1 span {
+      color: #ff4081;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+    }
+
+    .cta {
+      background: #ff4081;
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      margin-top: 20px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .cta:hover {
+      background: #e73370;
+    }
+
+    .profile-img {
+      margin-top: 30px;
+      width: 200px;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 0 20px #ff4081;
+    }
+
+    section {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #ff4081;
+      margin-bottom: 20px;
+    }
+
+    .skills-list, .projects-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .skill-item, .project-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-card img {
+      max-width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    form input, form textarea {
+      width: 80%;
+      max-width: 500px;
+      padding: 12px 15px;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      font-size: 1rem;
+    }
+
+    form input::placeholder, form textarea::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    form textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    button[type="submit"] {
+      background: #ff4081;
+      padding: 12px 30px;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background: #e73370;
+    }
+
+    .sosmed {
+      margin-top: 40px;
+    }
+
+    .sosmed a {
+      display: inline-block;
+      margin: 10px 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+
+    .sosmed a i {
+      margin-right: 8px;
+    }
+
+    .sosmed a:hover {
+      color: #ff4081;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.5);
+      margin-top: 40px;
+    }
+
+    .spotify-section {
+      padding: 60px 40px;
+      background-color: rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .spotify-section iframe {
+      border-radius: 12px;
+      width: 100%;
+      max-width: 400px;
+      height: 152px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">ALFHIN HIDAYAT</div>
+    <ul>
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Proyek</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="intro">
+      <h1>Halo, Saya <span>ALFHIN HIDAYAT</span></h1>
+      <p>Web Developer | UI Designer | Freelancer</p>
+      <a href="#contact" class="cta">Hubungi Saya</a>
+    </div>
+    <img src="https://i.supa.codes/1YPB4O" alt="Foto Profil" class="profile-img">
+  </header>
+
+  <section id="about">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah seorang web developer yang suka membuat website modern dan interaktif. Selalu belajar teknologi baru dan passionate di dunia desain digital.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Keahlian</h2>
+    <div class="skills-list">
+      <div class="skill-item">HTML & CSS</div>
+      <div class="skill-item">JavaScript</div>
+      <div class="skill-item">React.js</div>
+      <div class="skill-item">UI/UX Design</div>
+      <div class="skill-item">WordPress</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Proyek</h2>
+    <div class="projects-list">
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=500&q=80" alt="Project 1">
+        <h3>Website Portofolio</h3>
+        <p>Website personal dengan desain clean dan responsive.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=500&q=80" alt="Project 2">
+        <h3>Aplikasi To-Do List</h3>
+        <p>Aplikasi web sederhana untuk mencatat kegiatan harian.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="spotify-section">
+    <h2>Playlist Favorit Saya</h2>
+    <p>Dengarkan playlist favorit saya sambil menjelajahi portofolio ini.</p>
+    <iframe src="https://open.spotify.com/embed/playlist/7sUQVs2bAy4s7Ct1WdNNj0?utm_source=generator"
+      frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"></iframe>
+  </section>
+
+  <section id="contact">
+    <h2>Kontak</h2>
+    <form action="https://formspree.io/f/xblovjkv" method="POST">
+      <input type="text" name="nama" placeholder="Nama Anda" required>
+      <input type="email" name="email" placeholder="Alamat Email Anda" required>
+      <textarea name="pesan" placeholder="Tulis pesan Anda di sini..." required></textarea>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+    <div class="sosmed">
+      <a href="https://www.instagram.com/fhinz_anxiety" target="_blank">
+        <i class="fa-brands fa-instagram"></i> Instagram
+      </a>
+      <a href="https://www.linkedin.com/in/username" target="_blank">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/Fhynn" target="_blank">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 ALFHIN HIDAYAT. All Rights Reserved.
+  </footer>
+</body>
+</html>
